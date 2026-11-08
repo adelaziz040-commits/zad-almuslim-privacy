@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سياسة خصوصية زاد المسلم</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a single centered document column under a sticky brand header; emerald/gold identity, light + dark. */
+  :root {
+    --bg: #F6F4EC; --surface: #FFFFFF; --fg: #1A2420; --muted: #5C6A63;
+    --accent: #0F6B4F; --gold: #9C7220; --border: #E4E0D4; --band: #0E3A2C;
+    --display: "Amiri", "Times New Roman", serif;
+    --body: "Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1412; --surface: #161F1C; --fg: #ECF1EE; --muted: #9BA8A3;
+      --accent: #3DC79A; --gold: #E8B64C; --border: #293531; --band: #0A1512;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1412; --surface: #161F1C; --fg: #ECF1EE; --muted: #9BA8A3;
+    --accent: #3DC79A; --gold: #E8B64C; --border: #293531; --band: #0A1512;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--body); line-height: 1.7; margin: 0; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--band); z-index: 10; }
+
+  .wrap { max-width: 44rem; margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+
+  header {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+    background: var(--band); color: #F4ECD8;
+  }
+  .head-in { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding-block: 14px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-inline-end: auto; }
+  .seal { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); display: grid; place-items: center; font-size: 20px; flex: none; }
+  .brand b { font-family: var(--display); font-size: 1.4rem; font-weight: 700; display: block; line-height: 1.1; }
+  .brand span { font-size: .8rem; color: #C9D6CF; letter-spacing: .02em; }
+  .langs { display: flex; gap: 6px; }
+  .langs button {
+    font-family: var(--body); font-size: .85rem; color: #E7D9B6; cursor: pointer;
+    background: transparent; border: 1px solid rgba(232,182,76,.45); border-radius: 999px; padding: 6px 14px;
+  }
+  .langs button[aria-pressed="true"] { background: var(--gold); color: #1A1405; border-color: var(--gold); font-weight: 600; }
+
+  main { padding-block: 32px 56px; }
+  h1 { font-family: var(--display); font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 700; margin: 0 0 6px; text-wrap: balance; }
+  .eff { color: var(--muted); font-size: .92rem; margin: 0 0 28px; }
+  section { padding-block: 20px; border-top: 1px solid var(--border); }
+  h2 { font-family: var(--display); font-size: 1.4rem; color: var(--accent); margin: 0 0 10px; display: flex; align-items: baseline; gap: 10px; }
+  h2 .n { font-size: .95rem; color: var(--gold); font-family: var(--body); font-variant-numeric: tabular-nums; font-weight: 600; }
+  p { margin: 0 0 12px; }
+  .lead { font-size: 1.05rem; }
+  ul { margin: 6px 0 12px; padding-inline-start: 1.3em; }
+  li { margin-bottom: 8px; }
+  li b { color: var(--fg); }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  strong { color: var(--fg); }
+
+  .contact { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .contact .row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .mail { font-family: var(--body); font-weight: 600; color: var(--accent); word-break: break-all; }
+  .copy { font: inherit; font-size: .82rem; cursor: pointer; background: var(--accent); color: var(--surface); border: 0; border-radius: 999px; padding: 6px 14px; }
+  :root[data-theme="dark"] .copy, :root:not([data-theme="light"]) .copy { color: #0E1412; }
+
+  footer { color: var(--muted); font-size: .85rem; text-align: center; padding-block: 8px 24px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  [dir="ltr"] { text-align: left; }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="wrap head-in">
+    <div class="brand">
+      <span class="seal">🕌</span>
+      <span><b>زادِ المسلم</b><span data-ar>سياسة الخصوصية</span><span data-en hidden>Privacy Policy</span></span>
+    </div>
+    <div class="langs">
+      <button id="lang-ar" aria-pressed="true">العربية</button>
+      <button id="lang-en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Arabic -->
+  <div id="ar" dir="rtl">
+    <h1>سياسة الخصوصية</h1>
+    <p class="eff">تطبيق «زادِ المسلم» · آخر تحديث: ٨ نوفمبر ٢٠٢٦</p>
+
+    <section>
+      <h2><span class="n">١</span> مقدمة</h2>
+      <p class="lead">«زادِ المسلم» تطبيق إسلامي يوفّر المصحف الشريف، ومواقيت الصلاة، والأذان، والأذكار، والتسبيح، وأسماء الله الحسنى، وقصص القرآن، واتجاه القبلة.</p>
+      <p>نحترم خصوصيتك. التطبيق <strong>لا يطلب منك إنشاء حساب</strong>، و<strong>لا نجمع بياناتك الشخصية على خوادم خاصة بنا</strong>. تشرح هذه الصفحة البيانات التي يتعامل معها التطبيق ولماذا.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٢</span> المعلومات التي نتعامل معها</h2>
+      <ul>
+        <li><b>الموقع الجغرافي:</b> يُستخدم لحساب مواقيت الصلاة في مدينتك وتحديد اتجاه القبلة. تتم المعالجة على جهازك، ولا نرسل موقعك إلى خوادمنا، ويُحفظ آخر موقع معروف على جهازك فقط لتسريع الحساب.</li>
+        <li><b>الإشعارات:</b> تذكيرات الأذان تُجدوَل وتُعرَض على جهازك محليًا، ولا تمرّ عبر خوادمنا.</li>
+        <li><b>بيانات محفوظة على جهازك:</b> الإعدادات، والإشارات المرجعية، وتقدّم الورد اليومي، وآخر صفحة قرأتها — كلها مخزّنة على جهازك فقط، وتُحذف عند إلغاء تثبيت التطبيق.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">٣</span> الإعلانات</h2>
+      <p>يعرض التطبيق إعلانات عبر خدمة <strong>Google AdMob</strong>. قد تجمع جوجل «معرّف الإعلانات» (Advertising ID) وبعض بيانات الجهاز والاستخدام لعرض إعلانات مناسبة وقياس أدائها. تخضع هذه البيانات لسياسة خصوصية جوجل، ويمكنك الاطّلاع عليها هنا:
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>في المناطق التي تتطلب موافقة (مثل الاتحاد الأوروبي)، تظهر لك شاشة موافقة قبل عرض الإعلانات الشخصية. ويمكنك دائمًا إعادة ضبط أو إيقاف «معرّف الإعلانات» من إعدادات جهازك.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٤</span> التلاوات الصوتية</h2>
+      <p>عند تشغيل أو تحميل تلاوة قارئ، يطلب التطبيق ملفات الصوت من موقع
+        <a href="https://everyayah.com" target="_blank" rel="noopener">everyayah.com</a>. كأي طلب على الإنترنت، قد يرى هذا الموقع عنوان IP الخاص بجهازك. التلاوات المحمّلة تُخزَّن على جهازك للاستماع دون إنترنت.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٥</span> الأذونات التي يطلبها التطبيق</h2>
+      <ul>
+        <li><b>الموقع:</b> لمواقيت الصلاة واتجاه القبلة.</li>
+        <li><b>الإشعارات:</b> لتنبيهات الأذان في أوقات الصلاة.</li>
+        <li><b>الإنترنت:</b> لعرض الإعلانات وتشغيل أو تحميل التلاوات.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">٦</span> الأطفال</h2>
+      <p>التطبيق موجّه للجمهور العام، وليس مخصّصًا للأطفال دون سنّ الثالثة عشرة، ولا نجمع عن قصد أي بيانات منهم.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٧</span> تحكّمك في بياناتك</h2>
+      <p>يمكنك إيقاف الإعلانات المخصّصة أو إعادة ضبط معرّف الإعلانات من إعدادات جهازك، وإيقاف إذن الموقع أو الإشعارات في أي وقت. ولحذف كل البيانات المحفوظة محليًا، امسح بيانات التطبيق أو ألغِ تثبيته.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٨</span> تغييرات على هذه السياسة</h2>
+      <p>قد نُحدّث هذه السياسة من وقت لآخر. سيظهر تاريخ آخر تحديث أعلى الصفحة، ويُعدّ استمرارك في استخدام التطبيق موافقة على النسخة المحدّثة.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">٩</span> التواصل</h2>
+      <p>لأي استفسار عن الخصوصية، تواصل مع المطوّر <strong>Adel Aziz</strong>:</p>
+      <div class="contact">
+        <div class="row">
+          <span class="mail">adelaziz040@gmail.com</span>
+          <button class="copy" data-copy="adelaziz040@gmail.com" data-label="نسخ">نسخ</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- English -->
+  <div id="en" dir="ltr" hidden>
+    <h1>Privacy Policy</h1>
+    <p class="eff">Zad Al-Muslim app · Last updated: November 8, 2026</p>
+
+    <section>
+      <h2><span class="n">1</span> Introduction</h2>
+      <p class="lead">Zad Al-Muslim is an Islamic app offering the Mushaf, prayer times, the adhan, adhkar, tasbih, the Names of Allah, Quran stories, and the qibla direction.</p>
+      <p>We respect your privacy. The app <strong>does not ask you to create an account</strong>, and <strong>we do not collect your personal data on any servers of ours</strong>. This page explains the data the app handles and why.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span> Information we handle</h2>
+      <ul>
+        <li><b>Location:</b> used to calculate prayer times for your city and the qibla direction. It is processed on your device; we do not send your location to our servers, and only your last known location is stored on your device to speed up the calculation.</li>
+        <li><b>Notifications:</b> adhan reminders are scheduled and shown locally on your device and do not pass through our servers.</li>
+        <li><b>Data stored on your device:</b> settings, bookmarks, daily wird progress and your last read page are stored only on your device and are removed when you uninstall the app.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span> Advertising</h2>
+      <p>The app shows ads through <strong>Google AdMob</strong>. Google may collect the Advertising ID and some device and usage data to serve and measure relevant ads. This data is governed by Google's privacy policy:
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p>Where consent is required (such as the EU), a consent screen is shown before personalized ads. You can always reset or opt out of the Advertising ID in your device settings.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span> Recitation audio</h2>
+      <p>When you play or download a reciter's recitation, the app requests audio files from
+        <a href="https://everyayah.com" target="_blank" rel="noopener">everyayah.com</a>. As with any internet request, that site may see your device's IP address. Downloaded recitations are stored on your device for offline listening.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">5</span> Permissions the app requests</h2>
+      <ul>
+        <li><b>Location:</b> for prayer times and the qibla direction.</li>
+        <li><b>Notifications:</b> for adhan alerts at prayer times.</li>
+        <li><b>Internet:</b> to show ads and to stream or download recitations.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span> Children</h2>
+      <p>The app is intended for a general audience and is not directed at children under 13, and we do not knowingly collect any data from them.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">7</span> Your control over your data</h2>
+      <p>You can turn off personalized ads or reset the Advertising ID in your device settings, and disable the location or notification permission at any time. To delete all locally stored data, clear the app's data or uninstall it.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">8</span> Changes to this policy</h2>
+      <p>We may update this policy from time to time. The last-updated date appears at the top of the page, and continued use of the app means you accept the updated version.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">9</span> Contact</h2>
+      <p>For any privacy question, contact the developer <strong>Adel Aziz</strong>:</p>
+      <div class="contact">
+        <div class="row">
+          <span class="mail">adelaziz040@gmail.com</span>
+          <button class="copy" data-copy="adelaziz040@gmail.com" data-label="Copy">Copy</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2026 Adel Aziz · زادِ المسلم</footer>
+</main>
+
+<script>
+  (function () {
+    var ar = document.getElementById("ar"), en = document.getElementById("en");
+    var bAr = document.getElementById("lang-ar"), bEn = document.getElementById("lang-en");
+    function show(lang) {
+      var arOn = lang === "ar";
+      ar.hidden = !arOn; en.hidden = arOn;
+      bAr.setAttribute("aria-pressed", String(arOn));
+      bEn.setAttribute("aria-pressed", String(!arOn));
+      document.querySelectorAll("[data-ar]").forEach(function (e) { e.hidden = !arOn; });
+      document.querySelectorAll("[data-en]").forEach(function (e) { e.hidden = arOn; });
+    }
+    bAr.addEventListener("click", function () { show("ar"); });
+    bEn.addEventListener("click", function () { show("en"); });
+
+    document.querySelectorAll(".copy").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var text = btn.getAttribute("data-copy"), label = btn.getAttribute("data-label");
+        function done() { btn.textContent = "✓"; setTimeout(function () { btn.textContent = label; }, 1400); }
+        try {
+          navigator.clipboard.writeText(text).then(done, function () {
+            var r = document.createRange(); r.selectNodeContents(btn.previousElementSibling);
+            var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          });
+        } catch (e) {
+          var r = document.createRange(); r.selectNodeContents(btn.previousElementSibling);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
